@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  protected isHome: boolean = false;
-  constructor() { 
+  protected isHome = false;
+  constructor() {
     this.isHome = true;
   }
 
