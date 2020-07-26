@@ -3,14 +3,32 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { IndexComponent } from './index/index.component';
+//Translation
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslationComponent } from './translation/translation.component';
+import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TranslationComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (http: HttpClient) => {
+          return new TranslateHttpLoader(http, './assets/lang/', '.json');
+        },
+        deps: [ HttpClient ]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
