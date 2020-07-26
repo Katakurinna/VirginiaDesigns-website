@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
 
+The project is created to learn and explore angular cli framework with Virginia (my sister) and teach she web design and development.
+If you want to help my sister learn the wonderful world of web development, you can create issues, and pull request. Thanks.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
