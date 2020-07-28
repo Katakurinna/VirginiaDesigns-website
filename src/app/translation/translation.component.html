@@ -1,6 +1,12 @@
 <div class="contenedor">
-    <div class="contenedor-botones">
-        <button [ngClass]="{'active': activeLang == 'es'}" (click)="changeLang('es')">Español</button>
-        <button [ngClass]="{'active': activeLang == 'en'}" (click)="changeLang('en')">Inglés</button>
+
+    <div class=" btn-group contenedor-botones">
+        <button class="btn btn-link btn-sm text-decoration-none" [ngClass]="{'active': activeLang == 'es'}" (click)="changeLang('es')">
+            <span [ngClass]="activeLang == 'es' ? 'text-danger' : 'text-secondary'">Español</span>
+        </button>
+
+        <button class="btn btn-link btn-sm text-decoration-none" [ngClass]="{'active': activeLang == 'en'}" (click)="changeLang('en')">
+            <span [ngClass]="activeLang == 'en' ? 'text-danger' : 'text-secondary'">Ingles</span>
+            </button>
     </div>
 </div>

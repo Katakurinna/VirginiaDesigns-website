@@ -10,11 +10,13 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslationComponent } from './translation/translation.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { BotonHolaComponent } from './boton-hola/boton-hola.component';
 @NgModule({
   declarations: [
     AppComponent,
     TranslationComponent,
-    NavbarComponent
+    NavbarComponent,
+    BotonHolaComponent
   ],
   imports: [
     BrowserModule,
